@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class Hoyo : MonoBehaviour
 {
-    public GameManager gameManager; // Referencia al GameManager que gestiona el juego
+    public GameManager gameManager; 
 
     private void OnTriggerEnter(Collider other)
     {

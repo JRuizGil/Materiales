@@ -11,27 +11,22 @@ public class GameManager : MonoBehaviour
     {
         ActivarHoyoActual();
     }
-
     public void ContarTiro()
     {
         tiros++;
         Debug.Log("Tiro n�mero: " + tiros);
     }
-
     public void SiguienteHoyo()
     {
         Debug.Log("Hoyo " + (hoyoActual + 1) + " completado con " + tiros + " tiros.");
-
-        // Desactivar hoyo actual
+                // Desactivar hoyo actual
         hoyos[hoyoActual].SetActive(false);
-
-        // Ir al siguiente
+                // Ir al siguiente
         hoyoActual++;
-
         if (hoyoActual >= hoyos.Length)
         {
             Debug.Log("�Has terminado todos los hoyos!");
-            // Aqu� podr�as cargar una escena de final o reiniciar
+            
         }
         else
         {
@@ -40,12 +35,10 @@ public class GameManager : MonoBehaviour
             ReiniciarPelota(); // Si deseas volver a colocar la bola al principio
         }
     }
-
     void ActivarHoyoActual()
     {
         hoyos[hoyoActual].SetActive(true);
     }
-
     void ReiniciarPelota()
     {
         pelota.transform.position = new Vector3(0, 1, 0); // Puedes ajustar esta posici�n seg�n tu mapa
